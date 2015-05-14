@@ -46,6 +46,7 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
 		return CGRect(x: 0, y: topMargin, width: cardStackView.frame.width, height: cardStackView.frame.height)
 	}
 	
+	// Function to create a Card struct, containing both a CardView and a SwipeView
 	private func createCard(topMargin: CGFloat) -> Card{
 		let cardView = CardView()
 		let swipeView = SwipeView(frame: createCardFrame(topMargin))

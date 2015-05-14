@@ -17,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
+		
+		// Initialize Parse.
+		Parse.setApplicationId("rS4V4g4dX2VT037WTLxSgHWYD9zw2y2A58Yp9Bl0", clientKey:"V77OlMk8mvSDMOlapgENChQtg4Euw0RfqqCGT6No")
+				
 		return true
 	}
 
@@ -49,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	lazy var applicationDocumentsDirectory: NSURL = {
 	    // The directory the application uses to store the Core Data store file. This code uses a directory named "self.edu.koen.koen_BitDate" in the application's documents Application Support directory.
 	    let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-	    return urls[urls.count-1] as! NSURL
+	    return urls[urls.count-1] as NSURL
 	}()
 
 	lazy var managedObjectModel: NSManagedObjectModel = {

@@ -24,7 +24,7 @@ class CardView: UIView {
 		initialize()
 	}
 	
-	init() {
+	override init() {
 		super.init(frame: CGRectZero)
 		initialize()
 	}
