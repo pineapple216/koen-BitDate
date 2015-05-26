@@ -16,8 +16,10 @@
 		5D1439511AF7C8B20010F5E4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D14394F1AF7C8B20010F5E4 /* LaunchScreen.xib */; };
 		5D14395D1AF7C8B20010F5E4 /* koen_BitDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D14395C1AF7C8B20010F5E4 /* koen_BitDateTests.swift */; };
 		5D529F2B1AF7CBE70007005C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529F2A1AF7CBE70007005C /* CardView.swift */; };
+		5D5D736F1B0E4CFE005BEEC4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5D736E1B0E4CFE005BEEC4 /* ProfileViewController.swift */; };
 		5D72DD391AFBDD75003A33D1 /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D72DD381AFBDD75003A33D1 /* SwipeView.swift */; };
 		5D8168BA1AFE1151006ED2E0 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8168B91AFE1151006ED2E0 /* CardsViewController.swift */; };
+		5D9EB0C51B0BAA7400B11E0D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9EB0C41B0BAA7400B11E0D /* User.swift */; };
 		5DB3EB801B051E3700736D52 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB3EB7F1B051E3700736D52 /* LoginViewController.swift */; };
 		5DC312971B04B2A700DE649B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC312951B04B2A700DE649B /* Parse.framework */; };
 		5DC312981B04B2A700DE649B /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC312961B04B2A700DE649B /* ParseFacebookUtils.framework */; };
@@ -57,8 +59,10 @@
 		5D14395B1AF7C8B20010F5E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D14395C1AF7C8B20010F5E4 /* koen_BitDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = koen_BitDateTests.swift; sourceTree = "<group>"; };
 		5D529F2A1AF7CBE70007005C /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		5D5D736E1B0E4CFE005BEEC4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5D72DD381AFBDD75003A33D1 /* SwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
 		5D8168B91AFE1151006ED2E0 /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		5D9EB0C41B0BAA7400B11E0D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5DB3EB7F1B051E3700736D52 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5DC312951B04B2A700DE649B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		5DC312961B04B2A700DE649B /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				5D1439431AF7C8B20010F5E4 /* AppDelegate.swift */,
+				5D9EB0C31B0BA83A00B11E0D /* Data */,
 				5D529F291AF7CA6A0007005C /* Views */,
 				5D8168B81AFE10E9006ED2E0 /* ViewControllers */,
 				5D14394A1AF7C8B20010F5E4 /* Main.storyboard */,
@@ -187,8 +192,17 @@
 				5D1439481AF7C8B20010F5E4 /* ViewController.swift */,
 				5DB3EB7F1B051E3700736D52 /* LoginViewController.swift */,
 				5D8168B91AFE1151006ED2E0 /* CardsViewController.swift */,
+				5D5D736E1B0E4CFE005BEEC4 /* ProfileViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5D9EB0C31B0BA83A00B11E0D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5D9EB0C41B0BAA7400B11E0D /* User.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		5DC312941B04B23800DE649B /* Frameworks */ = {
@@ -361,7 +375,9 @@
 				5D1439491AF7C8B20010F5E4 /* ViewController.swift in Sources */,
 				5D1439471AF7C8B20010F5E4 /* koen_BitDate.xcdatamodeld in Sources */,
 				5D8168BA1AFE1151006ED2E0 /* CardsViewController.swift in Sources */,
+				5D9EB0C51B0BAA7400B11E0D /* User.swift in Sources */,
 				5D529F2B1AF7CBE70007005C /* CardView.swift in Sources */,
+				5D5D736F1B0E4CFE005BEEC4 /* ProfileViewController.swift in Sources */,
 				5D72DD391AFBDD75003A33D1 /* SwipeView.swift in Sources */,
 				5D1439441AF7C8B20010F5E4 /* AppDelegate.swift in Sources */,
 			);

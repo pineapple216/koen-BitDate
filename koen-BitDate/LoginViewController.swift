@@ -27,6 +27,7 @@ class LoginViewController: UIViewController {
 			
 			if user == nil{
 				println("Uh oh. The user cancelled the Facebook Login.")
+				return
 			}
 			else if user.isNew{
 				println("User signed up and logged in through Facebook!")
@@ -37,23 +38,36 @@ class LoginViewController: UIViewController {
 					var r = result as NSDictionary
 					user["firstName"] = r["first_name"]
 					user["gender"] = r["gender"]
-					user["picture"] = ((r["picture"] as NSDictionary)["data"] as NSDictionary)["url"]
 					
 					var dateFormatter = NSDateFormatter()
 					dateFormatter.dateFormat = "MM/dd/yyyy"
 					user["birthday"] = dateFormatter.dateFromString(r["birthday"] as String)
 					
-					user.saveInBackgroundWithBlock({
-						succes, error in
-						println(succes)
-						println(error)
+					// Create a url to get the user's picture,
+					// And get it with an NSURLRequest
+					let pictureURL = ((r["picture"] as NSDictionary)["data"] as NSDictionary)["url"] as String
+					let url = NSURL(string: pictureURL)
+					let request = NSURLRequest(URL: url!)
+					
+					NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {
+						response, data, error in
+						
+						let imageFile = PFFile(name: "avatar.jpg", data: data)
+						user["picture"] = imageFile
+						user.saveInBackgroundWithBlock(nil)
+						
 					})
+					
 				})
 				
 			}
 			else{
 				println("User logged in through Facebook!")
 			}
+			
+			let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CardsNavController") as? UIViewController
+			
+			self.presentViewController(vc!, animated: true, completion: nil)
 		})
 		
 	}

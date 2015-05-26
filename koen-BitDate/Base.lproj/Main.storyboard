@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BOE-gy-mWJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -25,7 +26,7 @@
         <!--Login View Controller-->
         <scene sceneID="HmY-q8-lJr">
             <objects>
-                <viewController id="BOE-gy-mWJ" customClass="LoginViewController" customModule="koen_BitDate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BOE-gy-mWJ" customClass="LoginViewController" customModule="koen_BitDate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7ve-8S-1It"/>
                         <viewControllerLayoutGuide type="bottom" id="vdW-F0-R0N"/>
@@ -91,10 +92,53 @@
             </objects>
             <point key="canvasLocation" x="128" y="1061"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="kIg-jh-NCi">
+            <objects>
+                <viewController id="WnM-u9-X82" customClass="ProfileViewController" customModule="koen_BitDate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kyj-CV-Zi7"/>
+                        <viewControllerLayoutGuide type="bottom" id="TXz-j6-WrC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1T7-rO-g2a">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A41-fQ-RSH">
+                                <rect key="frame" x="0.0" y="64" width="600" height="479"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ney-oF-kqm">
+                                <rect key="frame" x="16" y="559" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="A41-fQ-RSH" secondAttribute="trailing" constant="-16" id="73n-qo-dLT"/>
+                            <constraint firstItem="A41-fQ-RSH" firstAttribute="top" secondItem="Kyj-CV-Zi7" secondAttribute="bottom" id="Ege-a1-0a7"/>
+                            <constraint firstItem="Ney-oF-kqm" firstAttribute="trailing" secondItem="1T7-rO-g2a" secondAttribute="trailingMargin" id="TSn-gX-wCc"/>
+                            <constraint firstItem="Ney-oF-kqm" firstAttribute="top" secondItem="A41-fQ-RSH" secondAttribute="bottom" constant="16" id="cxL-GL-z03"/>
+                            <constraint firstItem="TXz-j6-WrC" firstAttribute="top" secondItem="Ney-oF-kqm" secondAttribute="bottom" constant="20" id="ehJ-oo-OYh"/>
+                            <constraint firstItem="A41-fQ-RSH" firstAttribute="leading" secondItem="1T7-rO-g2a" secondAttribute="leadingMargin" constant="-16" id="oX5-8y-UW5"/>
+                            <constraint firstItem="Ney-oF-kqm" firstAttribute="leading" secondItem="1T7-rO-g2a" secondAttribute="leadingMargin" id="pNG-j6-Hjg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pzu-kE-byE"/>
+                    <connections>
+                        <outlet property="imageView" destination="A41-fQ-RSH" id="378-tx-thc"/>
+                        <outlet property="nameLabel" destination="Ney-oF-kqm" id="Xdf-0g-ymC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qlK-MY-Yr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128" y="1749"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="je9-vm-Zp3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yat-Yq-yzh" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CardsNavController" automaticallyAdjustsScrollViewInsets="NO" id="yat-Yq-yzh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G6f-n3-kdp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -108,6 +152,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9mQ-0a-Y2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-576" y="1061"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xvg-x6-QuQ">
+            <objects>
+                <navigationController storyboardIdentifier="ProfileNavController" automaticallyAdjustsScrollViewInsets="NO" id="kat-Sd-hI8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rOL-G9-fxK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WnM-u9-X82" kind="relationship" relationship="rootViewController" id="86T-lF-UGh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OXK-A0-2m4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-576" y="1749"/>
         </scene>
     </scenes>
 </document>
