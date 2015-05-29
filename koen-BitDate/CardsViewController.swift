@@ -37,6 +37,15 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
 		cardStackView.addSubview(frontCard!.swipeView)
     }
 
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		navigationItem.titleView = UIImageView(image: UIImage(named: "nav-header"))
+		
+		let leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav-back-button"), style: UIBarButtonItemStyle.Plain, target: self, action: "goToProfile:")
+		navigationItem.setLeftBarButtonItem(leftBarButtonItem, animated: true)
+	}
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -54,6 +63,10 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
 		swipeView.delegate = self
 		swipeView.innerView = cardView
 		return Card(cardView: cardView, swipeView: swipeView)
+	}
+	
+	func goToProfile(button: UIBarButtonItem){
+		pageController.goToPreviousVC()
 	}
 	
 	
