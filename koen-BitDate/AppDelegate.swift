@@ -30,7 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Check is we already have a user and if so, instantiate the Cards ViewController
 		// otherwise instantiate the login ViewController
 		if currentUser() != nil{
-			initialViewController = storyboard.instantiateViewControllerWithIdentifier("ProfileNavController") as UIViewController
+			
+			initialViewController = ViewController(transitionStyle: UIPageViewControllerTransitionStyle.Scroll, navigationOrientation: UIPageViewControllerNavigationOrientation.Horizontal, options: nil)
+			
+//			initialViewController = storyboard.instantiateViewControllerWithIdentifier("PageController") as UIViewController
 		}
 		else{
 			initialViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as UIViewController
