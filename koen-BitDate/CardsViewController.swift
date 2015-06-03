@@ -21,6 +21,10 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
 	
 	@IBOutlet weak var cardStackView: UIView!
 	
+	@IBOutlet weak var nahButton: UIButton!
+	@IBOutlet weak var yeahButton: UIButton!
+	
+	
 	var backCard: Card?
 	var frontCard: Card?
 	
@@ -32,6 +36,9 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
         // Do any additional setup after loading the view.
 		
 		cardStackView.backgroundColor = UIColor.clearColor()
+		
+		nahButton.setImage(UIImage(named: "nah-button-pressed"), forState: UIControlState.Highlighted)
+		yeahButton.setImage(UIImage(named: "yeah-button-pressed"), forState: UIControlState.Highlighted)
 		
 		// Get the unviewed users from Parse
 		// And create cards for them
@@ -63,6 +70,21 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	// MARK: - IBActions
+	
+	@IBAction func nahButtonPressed(sender: UIButton) {
+		if let card = frontCard{
+			card.swipeView.swipe(SwipeView.Direction.Left)
+		}
+	}
+	
+	@IBAction func yeahButtonPressed(sender: UIButton) {
+		if let card = frontCard{
+			card.swipeView.swipe(SwipeView.Direction.Right)
+		}
+	}
+	
     
 	private func createCardFrame(topMargin: CGFloat) -> CGRect{
 		return CGRect(x: 0, y: topMargin, width: cardStackView.frame.width, height: cardStackView.frame.height)
