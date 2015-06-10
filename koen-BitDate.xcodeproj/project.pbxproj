@@ -34,6 +34,8 @@
 		5DC312AA1B04B3D900DE649B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC312A91B04B3D900DE649B /* SystemConfiguration.framework */; };
 		5DC312AC1B04B3E500DE649B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC312AB1B04B3E500DE649B /* libz.dylib */; };
 		5DC312AE1B04B3EE00DE649B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC312AD1B04B3EE00DE649B /* libsqlite3.dylib */; };
+		5DF25B151B273E4200CAAEA4 /* MatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF25B141B273E4200CAAEA4 /* MatchesTableViewController.swift */; };
+		5DF25B171B273F8100CAAEA4 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF25B161B273F8100CAAEA4 /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		5DC312AB1B04B3E500DE649B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		5DC312AD1B04B3EE00DE649B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		5DC312AF1B04B56C00DE649B /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		5DF25B141B273E4200CAAEA4 /* MatchesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesTableViewController.swift; sourceTree = "<group>"; };
+		5DF25B161B273F8100CAAEA4 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		940BB5B066D83B84A36CA77B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9991FEB63DED0F9E762F5DAC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A41067AC4B45B3F0748214 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 			children = (
 				5D529F2A1AF7CBE70007005C /* CardView.swift */,
 				5D72DD381AFBDD75003A33D1 /* SwipeView.swift */,
+				5DF25B161B273F8100CAAEA4 /* UserCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 				5DB3EB7F1B051E3700736D52 /* LoginViewController.swift */,
 				5D8168B91AFE1151006ED2E0 /* CardsViewController.swift */,
 				5D5D736E1B0E4CFE005BEEC4 /* ProfileViewController.swift */,
+				5DF25B141B273E4200CAAEA4 /* MatchesTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -375,10 +381,12 @@
 				5D1439491AF7C8B20010F5E4 /* ViewController.swift in Sources */,
 				5D1439471AF7C8B20010F5E4 /* koen_BitDate.xcdatamodeld in Sources */,
 				5D8168BA1AFE1151006ED2E0 /* CardsViewController.swift in Sources */,
+				5DF25B151B273E4200CAAEA4 /* MatchesTableViewController.swift in Sources */,
 				5D9EB0C51B0BAA7400B11E0D /* User.swift in Sources */,
 				5D529F2B1AF7CBE70007005C /* CardView.swift in Sources */,
 				5D5D736F1B0E4CFE005BEEC4 /* ProfileViewController.swift in Sources */,
 				5D72DD391AFBDD75003A33D1 /* SwipeView.swift in Sources */,
+				5DF25B171B273F8100CAAEA4 /* UserCell.swift in Sources */,
 				5D1439441AF7C8B20010F5E4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
