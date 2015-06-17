@@ -24,7 +24,7 @@ struct User {
 	}
 }
 
-private func pfUserToUser(user: PFUser)-> User{
+func pfUserToUser(user: PFUser)-> User{
 	return User(id: user.objectId,
 				name: user.objectForKey("firstName") as String,
 				pfUser: user)
@@ -85,8 +85,15 @@ func saveLike(user: User){
 			match.setObject(matched ? "matched" : "liked", forKey: "type")
 			match.saveInBackgroundWithBlock(nil)
 		}
-	
-	
+}
+
+func getUserAsync(userID: String, callback: (User) -> () ) {
+	PFUser.query()?.whereKey("objectId", equalTo: userID).getFirstObjectInBackgroundWithBlock( { (object, error) -> Void in
+		if let pfUser = object as? PFUser {
+			let user = pfUserToUser(pfUser)
+			callback(user)
+		}
+	})
 }
 
 
