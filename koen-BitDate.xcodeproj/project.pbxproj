@@ -16,6 +16,9 @@
 		5D14394E1AF7C8B20010F5E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D14394D1AF7C8B20010F5E4 /* Images.xcassets */; };
 		5D1439511AF7C8B20010F5E4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D14394F1AF7C8B20010F5E4 /* LaunchScreen.xib */; };
 		5D14395D1AF7C8B20010F5E4 /* koen_BitDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D14395C1AF7C8B20010F5E4 /* koen_BitDateTests.swift */; };
+		5D25667A1B31FDA000F822A8 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2566791B31FDA000F822A8 /* libicucore.dylib */; };
+		5D25667C1B31FDB900F822A8 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D25667B1B31FDB900F822A8 /* libc++.dylib */; };
+		5D25667E1B31FE1100F822A8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D25667D1B31FE1100F822A8 /* Message.swift */; };
 		5D529F2B1AF7CBE70007005C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D529F2A1AF7CBE70007005C /* CardView.swift */; };
 		5D5D736F1B0E4CFE005BEEC4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5D736E1B0E4CFE005BEEC4 /* ProfileViewController.swift */; };
 		5D72DD391AFBDD75003A33D1 /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D72DD381AFBDD75003A33D1 /* SwipeView.swift */; };
@@ -63,6 +66,9 @@
 		5D1439561AF7C8B20010F5E4 /* koen-BitDateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "koen-BitDateTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D14395B1AF7C8B20010F5E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D14395C1AF7C8B20010F5E4 /* koen_BitDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = koen_BitDateTests.swift; sourceTree = "<group>"; };
+		5D2566791B31FDA000F822A8 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		5D25667B1B31FDB900F822A8 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		5D25667D1B31FE1100F822A8 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		5D529F2A1AF7CBE70007005C /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		5D5D736E1B0E4CFE005BEEC4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5D72DD381AFBDD75003A33D1 /* SwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
@@ -96,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D25667C1B31FDB900F822A8 /* libc++.dylib in Frameworks */,
+				5D25667A1B31FDA000F822A8 /* libicucore.dylib in Frameworks */,
 				5DC312AE1B04B3EE00DE649B /* libsqlite3.dylib in Frameworks */,
 				5DC312AC1B04B3E500DE649B /* libz.dylib in Frameworks */,
 				5DC312AA1B04B3D900DE649B /* SystemConfiguration.framework in Frameworks */,
@@ -213,6 +221,7 @@
 			children = (
 				5D9EB0C41B0BAA7400B11E0D /* User.swift */,
 				5DEAF3111B2894D000D07226 /* Match.swift */,
+				5D25667D1B31FE1100F822A8 /* Message.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -220,6 +229,8 @@
 		5DC312941B04B23800DE649B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5D25667B1B31FDB900F822A8 /* libc++.dylib */,
+				5D2566791B31FDA000F822A8 /* libicucore.dylib */,
 				5DC312AD1B04B3EE00DE649B /* libsqlite3.dylib */,
 				5DC312AB1B04B3E500DE649B /* libz.dylib */,
 				5DC312A91B04B3D900DE649B /* SystemConfiguration.framework */,
@@ -396,6 +407,7 @@
 				5DF25B171B273F8100CAAEA4 /* UserCell.swift in Sources */,
 				5D1439441AF7C8B20010F5E4 /* AppDelegate.swift in Sources */,
 				5DEAF3121B2894D000D07226 /* Match.swift in Sources */,
+				5D25667E1B31FE1100F822A8 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
