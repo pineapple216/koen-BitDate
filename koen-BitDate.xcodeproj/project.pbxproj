@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18819E7E410959EDA11B5B6E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9991FEB63DED0F9E762F5DAC /* libPods.a */; };
 		5D0B3A211B308F2900A1ED05 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B3A201B308F2900A1ED05 /* ChatViewController.swift */; };
 		5D1439441AF7C8B20010F5E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1439431AF7C8B20010F5E4 /* AppDelegate.swift */; };
 		5D1439471AF7C8B20010F5E4 /* koen_BitDate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D1439451AF7C8B20010F5E4 /* koen_BitDate.xcdatamodeld */; };
@@ -41,6 +40,7 @@
 		5DEAF3121B2894D000D07226 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEAF3111B2894D000D07226 /* Match.swift */; };
 		5DF25B151B273E4200CAAEA4 /* MatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF25B141B273E4200CAAEA4 /* MatchesTableViewController.swift */; };
 		5DF25B171B273F8100CAAEA4 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF25B161B273F8100CAAEA4 /* UserCell.swift */; };
+		690B3C5CA20D3DC68A8927A4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9991FEB63DED0F9E762F5DAC /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,7 +117,7 @@
 				5DC3129A1B04B35700DE649B /* AudioToolbox.framework in Frameworks */,
 				5DC312981B04B2A700DE649B /* ParseFacebookUtils.framework in Frameworks */,
 				5DC312971B04B2A700DE649B /* Parse.framework in Frameworks */,
-				18819E7E410959EDA11B5B6E /* libPods.a in Frameworks */,
+				690B3C5CA20D3DC68A8927A4 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
